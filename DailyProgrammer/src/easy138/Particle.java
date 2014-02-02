@@ -3,7 +3,6 @@ package easy138;
 import java.util.Scanner;
 
 /**
- * 
  * A class to solve /r/dailyprogrammer challenge Easy #138
  * http://www.reddit.com/r/dailyprogrammer/comments/1ml669/091713_challenge_138_easy_repulsionforce/
  * 
