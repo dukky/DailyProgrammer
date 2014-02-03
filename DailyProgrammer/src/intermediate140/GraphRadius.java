@@ -55,7 +55,6 @@ public class GraphRadius {
 				}
 			}
 			System.out.println(max);
-			new GraphRadius()
 		}
 	}
 
