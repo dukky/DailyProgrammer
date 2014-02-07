@@ -19,27 +19,35 @@ import java.util.Scanner;
 
 /**
  * A class to solve /r/dailyprogrammer challenge easy130
- * http://www.reddit.com/r/dailyprogrammer/comments/1givnn/061713_challenge_130_easy_roll_the_dies/
+ * http://www.reddit.com/r/
+ * dailyprogrammer/comments/1givnn/061713_challenge_130_easy_roll_the_dies/
  * 
  * Short description: Create a program to roll dies given Dice Notation
  * 
  * @author Andreas Holley
- *
+ * 
  */
 public class Easy130 {
 	public static void main(String[] args) {
 		try (Scanner s = new Scanner(System.in)) {
-			System.out.println("Enter the size of the die and the number of times you want to roll in the format '2d20':");
-			String input = s.nextLine();
-			String[] splitInput = input.split("d");
-			int times = Integer.parseInt(splitInput[0]);
-			int size = Integer.parseInt(splitInput[1]);
-			Die die = new Die(size);
-			int[] rolls = die.rollMany(times);
-			for (int i : rolls) {
-				System.out.print(i + " ");
+			while (true) {
+				System.out.println("Enter the size of the die and the number of times you want to roll in the format '2d20':");
+				String input = s.nextLine();
+
+				if (input.equals("q")) {
+					System.exit(0);
+				}
+
+				String[] splitInput = input.split("d");
+				int times = Integer.parseInt(splitInput[0]);
+				int size = Integer.parseInt(splitInput[1]);
+				Die die = new Die(size);
+				int[] rolls = die.rollMany(times);
+				for (int i : rolls) {
+					System.out.print(i + " ");
+				}
+				System.out.println("\n");
 			}
-			System.out.println("\n");
 		}
 	}
 }
