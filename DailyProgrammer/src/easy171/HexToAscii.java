@@ -18,15 +18,7 @@ public class HexToAscii {
 		while(true) {
 			String image = s.nextLine();
 			for (String line : image.split(" ")) {
-				line = Integer.toBinaryString(Integer.parseInt(line, 16));
-				for(int i = 0; i < 8-line.length(); ++i) {
-					System.out.print(" ");
-				}
-				for (char c : line.toCharArray()) {
-					if(c == '1') System.out.print("x");
-					else System.out.print(" ");
-				}
-				System.out.println();
+				System.out.println(String.format("%8s", Integer.toBinaryString(Integer.parseInt(line, 16))).replace('0', ' ').replace('1', 'x'));
 			}
 		}
 	}
