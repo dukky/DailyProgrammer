@@ -37,7 +37,7 @@ public class DiceDistribution {
 			s+=" ";
 		}
 		for (double d : percentages) {
-			s += String.format("%05.2f%% ", d*100);
+			s += String.format("%5.2f%% ", d*100);
 		}
 		return s;
 	}
