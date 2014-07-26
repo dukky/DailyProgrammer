@@ -13,13 +13,15 @@ public class HexToAscii {
 	
 	public static void main(String[] args) {
 		
-		Scanner s = new Scanner(System.in);
-		
-		while(true) {
-			String image = s.nextLine();
-			for (String line : image.split(" ")) {
-				System.out.println(String.format("%8s", Integer.toBinaryString(Integer.parseInt(line, 16))).replace('0', ' ').replace('1', 'x'));
+		try(Scanner s = new Scanner(System.in)) {
+			
+			while(true) {
+				String image = s.nextLine();
+				for (String line : image.split(" ")) {
+					System.out.println(String.format("%8s", Integer.toBinaryString(Integer.parseInt(line, 16))).replace('0', ' ').replace('1', 'x'));
+				}
 			}
+		
 		}
 	}	
 }
